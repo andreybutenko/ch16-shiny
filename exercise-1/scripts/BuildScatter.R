@@ -14,6 +14,7 @@ library(ggplot2)
 BuildScatter <- function(data, x, y, color, title = 'Title', xlab = 'X Title', ylab = 'Y Title') {
   scatter.plot <- ggplot(data = data) +
     geom_point(mapping = aes(x = x, y = y, color = color)) +
-    labs(title = title, x = xlab, y = ylab)
+    labs(title = title, x = xlab, y = ylab) +
+    theme(plot.title = element_text(hjust = 0.5))
   return(scatter.plot)
 }
